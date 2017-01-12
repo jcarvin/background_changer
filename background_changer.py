@@ -2,15 +2,7 @@ from PIL import Image
 from random import randint
 import ctypes
 
-img_dict = {
-    1: 'The Garden Of Earthly Delights; Bosch.jpg',
-    2: 'Last_judgement_Bosch.jpg',
-    3: 'pieter_bruegel_i-fall_of_rebel_angels_merge.jpg',
-    4: 'Bosch_-_Haywain_Triptych.jpg',
-    5: '8635e209c80721f0dcda7d1e2be32918.jpg',
-    6: 'Temptation_of_Saint_Anthony.jpg',
-    7: '5a8450034be3a68da7a3dca779d5fc2a.jpg'
-}
+img_dict = [f for f in os.listdir('.') if os.path.isfile(f) and f[-4:]=='.jpg' and f != 'cropped.jpg']
 
 img = Image.open(img_dict[randint(1, len(img_dict))])
 width, height = img.size
