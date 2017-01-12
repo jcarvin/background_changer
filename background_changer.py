@@ -7,7 +7,7 @@ img_dict = [f for f in os.listdir('.') if os.path.isfile(f) and
 	f[-4:]=='.jpg' and 
 	f != 'cropped.jpg']
 	
-#acquire the 'absolute path' to cropped.jpg (e.g. C:\\Users\*user*\Desktop\Background_changer.py
+#acquire the 'absolute path' to cropped.jpg (e.g. C:\\Users\*user*\Desktop\Background_changer.py)
 image_path = os.path.abspath('cropped.jpg')
 
 
